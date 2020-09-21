@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MovieMatcher.ViewModel;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace MovieMatcher.View
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class LoginPage : ContentPage
+    {
+        public LoginPage()
+        {
+            InitializeComponent();
+            var ViewModel = new LoginPageViewModel();
+            ViewModel.Navigation = Navigation;
+            BindingContext = ViewModel;
+        }
+    }
+}
